@@ -1,0 +1,16 @@
+@mixin section($pt: 24px, $pb: 40px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1920px) {
+    @content;
+  }
+}

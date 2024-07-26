@@ -1,0 +1,47 @@
+/* 'DIN Pro Bold 700' */
+@font-face {
+  font-family: 'DIN Pro Bold';
+  src: url(../../fonts/DINPro-Bold.ttf) format('ttf'),
+    url(../../fonts/DINPro-Bold.woff) format('woff');
+  font-weight: bold;
+}
+
+/* 'DIN Pro Light' */
+@font-face {
+  font-family: 'DIN Pro Light';
+  src: url(../../fonts/DINPro-Light.ttf) format('ttf'),
+    url(../../fonts/DINPro-Light.woff) format('woff');
+  font-weight: light;
+}
+
+/* 'DIN Pro Medium' */
+@font-face {
+  font-family: 'DIN Pro Medium';
+  src: url(../../fonts/DINPro-Medium.ttf) format('ttf'),
+    url(../../fonts/DINPro-Medium.woff) format('woff');
+  font-weight: medium;
+}
+
+/* 'DIN Pro Regular' */
+@font-face {
+  font-family: 'DIN Pro Regular';
+  src: url(../../fonts/DINPro.ttf) format('ttf'),
+    url(../../fonts/DINPro.woff) format('woff');
+  font-weight: normal;
+}
+
+/* 'DIN Pro Medium Italic' */
+@font-face {
+  font-family: 'DIN Pro Medium Italic';
+  src: url(../../fonts/DINPro-MediumItalic.ttf) format('ttf'),
+    url(../../fonts//DINPro-MediumItalic.woff) format('woff');
+  font-weight: medium;
+}
+
+/* 'DIN Pro Bold Italic' */
+@font-face {
+  font-family: 'DIN Pro Bold Italic';
+  src: url(../../fonts/DINPro-BoldItalic.ttf) format('ttf'),
+    url(../../fonts/DINPro-BoldItalic.woff) format('woff');
+  font-weight: bold;
+}
