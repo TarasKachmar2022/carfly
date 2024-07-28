@@ -1,11 +1,9 @@
 .header {
-  @include section(30, 30);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  // background-color: darkblue;
-  z-index: 10;
+  z-index: 5;
 }
 
 .header__container {
@@ -14,9 +12,18 @@
 }
 
 .header__thumb {
+  @include section(
+    calc(30px + (60 - 30) * ((100vw - 320px) / (768 - 320))),
+    calc(30px + (60 - 30) * ((100vw - 320px) / (768 - 320)))
+  );
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo {
+  width: calc(135px + (200 - 135) * ((100vw - 320px) / (768 - 320)));
+  height: calc(48px + (71 - 48) * ((100vw - 320px) / (768 - 320)));
 }
 
 .logo,
@@ -35,11 +42,12 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 5;
-  background-color: darkblue;
+  z-index: 1;
+  background-color: #010b26;
   overflow-y: scroll;
   transform: translateX(100%);
-  padding: 52px 15px;
+  padding: calc(52px + (125 - 52) * ((100vw - 320px) / (768 - 320)))
+    calc(15px + (36 - 15) * ((100vw - 320px) / (768 - 320)));
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -54,8 +62,8 @@
 
 .mobile-menu__close {
   position: absolute;
-  top: 46px;
-  right: 15px;
+  top: calc(46px + (92 - 46) * ((100vw - 320px) / (768 - 320)));
+  right: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
   display: flex;
   border: none;
   color: #ffffff;
@@ -74,13 +82,20 @@
 }
 
 .nav__list {
-  display: flex;
-  gap: 60px;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 40px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 60px;
   }
+}
+
+.nav__item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: calc(40px + (60 - 40) * ((100vw - 320px) / (768 - 320)));
+  }
+}
+
+.nav__link {
+  font-size: calc(16px + (38 - 16) * ((100vw - 320px) / (768 - 320)));
 }
 
 .menu-btn {
@@ -89,4 +104,9 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.menu-btn__icon {
+  width: calc(28px + (40 - 28) * ((100vw - 320px) / (768 - 320)));
+  height: calc(20px + (29 - 20) * ((100vw - 320px) / (768 - 320)));
 }

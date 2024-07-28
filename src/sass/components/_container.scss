@@ -1,6 +1,6 @@
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: calc(15px + (36 - 15) * ((100vw - 320px) / (768 - 320)));
+  padding-left: calc(15px + (36 - 15) * ((100vw - 320px) / (768 - 320)));
   margin-left: auto;
   margin-right: auto;
 
