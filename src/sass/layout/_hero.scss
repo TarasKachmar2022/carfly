@@ -1,5 +1,8 @@
 .hero {
-  @include section(150, 50);
+  @include section(
+    calc(150px + (220 - 150) * ((100vw - 320px) / (768 - 320))),
+    calc(50px + (80 - 50) * ((100vw - 320px) / (768 - 320)))
+  );
   position: relative;
   background-color: #010b26;
   z-index: 0;
@@ -10,8 +13,8 @@
   position: absolute;
   content: '';
   top: 50%;
-  width: 983px;
-  height: 174px;
+  width: calc(983px + (1559 - 983) * ((100vw - 320px) / (768 - 320)));
+  height: calc(174px + (400 - 174) * ((100vw - 320px) / (768 - 320)));
   z-index: -1;
   background: linear-gradient(to right, #ff0f87, #4612cc);
   transform: translateY(50%) skew(20deg) rotate(43deg);
@@ -25,13 +28,14 @@
 
 .hero__title {
   font-size: var(--fs-hero-title);
-  margin-bottom: 20px;
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__descr {
-  font-family: var(--secondary-font);
   font-weight: light;
-  margin-bottom: 20px;
+  font-family: var(--secondary-font);
+  font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (768 - 320)));
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__img {
@@ -41,30 +45,33 @@
 .hero__list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: calc(30px + (45 - 30) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__thumb {
   display: inline-flex;
   border: 1px solid currentColor;
   border-radius: 50%;
-  padding: 10px;
-  margin-bottom: 11px;
+  padding: calc(10px + (20 - 10) * ((100vw - 320px) / (768 - 320)));
+  margin-bottom: calc(11px + (17 - 11) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__icon {
+  width: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  height: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
   fill: currentColor;
 }
 
 .hero__description {
   font-weight: 500;
   font-family: 'DIN Pro Medium', sans-serif;
-  font-size: 14px;
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__btn {
   @extend .btn;
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
   width: 100%;
 }

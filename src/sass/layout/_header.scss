@@ -13,8 +13,8 @@
 
 .header__thumb {
   @include section(
-    calc(30px + (60 - 30) * ((100vw - 320px) / (768 - 320))),
-    calc(30px + (60 - 30) * ((100vw - 320px) / (768 - 320)))
+    calc(30px + (50 - 30) * ((100vw - 320px) / (768 - 320))),
+    calc(30px + (50 - 30) * ((100vw - 320px) / (768 - 320)))
   );
   display: flex;
   align-items: center;
