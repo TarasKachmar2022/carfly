@@ -1,0 +1,24 @@
+.btn {
+  @include font(700, 20px, 1.2, 0em);
+  font-family: var(--main-font);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 4px;
+  // min-width: 236px;
+  background: linear-gradient(to bottom right, #fccf31, #f55555);
+  color: currentColor;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  transition-property: background-image;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(to bottom right, #f55555, #fccf31);
+  }
+}

@@ -1,5 +1,11 @@
 .header {
-  background-color: darkblue;
+  @include section(30, 30);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // background-color: darkblue;
+  z-index: 10;
 }
 
 .header__container {
@@ -16,6 +22,11 @@
 .logo,
 .menu-btn {
   fill: #ffffff;
+}
+
+.menu-btn {
+  border: none;
+  background-color: transparent;
 }
 
 .mobile-menu {

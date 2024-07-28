@@ -12,9 +12,14 @@
   --fw-semibold: 600;
   --fw-bold: 700;
   // Font sizes
-  --fs-logo-s: 36px;
+  --fs-hero-title: 36px;
+  // --fs-logo-s: 36px;
   // Line heights
-  --lh-main: 1.2;
+  // --lh-main: 1.2;
   // Text colors
   --main-text-cl: #ffffff;
+  // Duration
+  --duration: 500ms;
+  // Timing function
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
