@@ -1,6 +1,6 @@
 .hero {
   @include section(
-    calc(150px + (220 - 150) * ((100vw - 320px) / (768 - 320))),
+    calc(110px + (220 - 110) * ((100vw - 320px) / (768 - 320))),
     calc(50px + (80 - 50) * ((100vw - 320px) / (768 - 320)))
   );
   position: relative;
@@ -10,16 +10,7 @@
 }
 
 .hero::after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  width: calc(983px + (1559 - 983) * ((100vw - 320px) / (768 - 320)));
-  height: calc(174px + (400 - 174) * ((100vw - 320px) / (768 - 320)));
-  z-index: -1;
-  background: linear-gradient(to right, #ff0f87, #4612cc);
-  transform: translateY(50%) skew(20deg) rotate(43deg);
-  margin-left: -254px;
-  margin-right: -254px;
+  @extend %bg-ltr;
 }
 
 .hero__container {
@@ -35,6 +26,7 @@
   font-weight: light;
   font-family: var(--secondary-font);
   font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (768 - 320)));
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
@@ -59,9 +51,7 @@
 }
 
 .hero__icon {
-  width: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
-  height: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
-  fill: currentColor;
+  @extend .btn__icon;
 }
 
 .hero__description {

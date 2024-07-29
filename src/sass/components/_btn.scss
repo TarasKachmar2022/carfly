@@ -6,7 +6,7 @@
   justify-content: space-between;
   border: none;
   border-radius: calc(4px + (6 - 4) * ((100vw - 320px) / (768 - 320)));
-  // min-width: 236px;
+  min-width: 100%;
   background: linear-gradient(to bottom right, #fccf31, #f55555);
   color: currentColor;
   padding-top: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
@@ -21,4 +21,10 @@
   &:focus {
     background-image: linear-gradient(to bottom right, #f55555, #fccf31);
   }
+}
+
+.btn__icon {
+  width: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  height: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  fill: currentColor;
 }

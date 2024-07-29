@@ -1,0 +1,48 @@
+.products {
+  @include section();
+  position: relative;
+  background-color: #010b26;
+  z-index: 0;
+}
+
+.products::after {
+  @extend %bg-rtl;
+}
+
+.products__item {
+  border-radius: 4px;
+  background-color: #0b1c47;
+  padding: 20px;
+}
+
+.products__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.products__title {
+  @extend .section-title;
+  margin-bottom: 30px;
+}
+
+.product__img {
+  margin-bottom: 20px;
+}
+
+.products__subtitle {
+  @extend .subtitle;
+  margin-bottom: 10px;
+}
+
+.products__descr {
+  @extend .descr;
+  margin-bottom: 20px;
+}
+
+.products__price {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.products__btn {
+  @extend .btn;
+}
