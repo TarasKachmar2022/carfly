@@ -7,8 +7,8 @@ const swiper = new Swiper('.swiper', {
     0: {
       direction: 'vertical',
       slidesPerView: 2,
-      allowTouchMove: false,
-      loop: false,
+      // allowTouchMove: false,
+      // loop: false,
     },
     768: {
       direction: 'horizontal',

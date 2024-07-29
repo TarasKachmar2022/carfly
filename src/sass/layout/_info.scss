@@ -1,0 +1,17 @@
+.info {
+  @include section();
+  position: relative;
+  background-color: #010b26;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.info::after {
+  @extend %bg-rtl;
+  top: 20%;
+}
+
+.info__title {
+  @extend .section-title;
+  margin-bottom: 30px;
+}
