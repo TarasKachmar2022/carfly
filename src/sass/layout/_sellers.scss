@@ -1,0 +1,17 @@
+.sellers {
+  @include section();
+  position: relative;
+  background-color: #010b26;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sellers::after {
+  @extend %bg-ltr;
+  top: 30%;
+}
+
+.sellers__title {
+  @extend .section-title;
+  margin-bottom: 30px;
+}
