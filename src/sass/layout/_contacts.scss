@@ -1,0 +1,42 @@
+.contacts {
+  @include section(50, 40);
+  position: relative;
+  background-color: #010b26;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.contacts::after {
+  @extend %bg-ltr;
+  top: 45%;
+}
+
+.contacts__title {
+  @extend .section-title;
+  margin-bottom: 30px;
+}
+
+.contacts__list {
+  margin-bottom: 20px;
+}
+
+.contacts__item:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+}
+
+.contacts__item:last-child {
+  padding-top: 20px;
+}
+
+.contacts__subitem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contacts__subtitle {
+  margin-bottom: 10px;
+}
+
+.contacts__map {
+  border-radius: 5px;
+}
