@@ -10,7 +10,9 @@
   // font-size: 18px;
   // background: #fff;
   // border: 1px solid #ddd;
-  height: 188px !important;
+  height: calc(
+    188px + (451 - 188) * ((100vw - 320px) / (768 - 320))
+  ) !important;
   // width: 290px !important;
 }
 

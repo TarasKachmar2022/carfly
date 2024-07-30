@@ -8,10 +8,10 @@
 
 .sellers::after {
   @extend %bg-ltr;
-  top: 30%;
+  top: calc(30% + (0 - 100) * ((100vw - 320px) / (768 - 320)));
 }
 
 .sellers__title {
   @extend .section-title;
-  margin-bottom: 30px;
+  margin-bottom: calc(30px + (42 - 30) * ((100vw - 320px) / (768 - 320)));
 }
