@@ -8,10 +8,10 @@
 
 .info::after {
   @extend %bg-rtl;
-  top: 20%;
+  top: calc(20% + (0 - 150) * ((100vw - 320px) / (768 - 320)));
 }
 
 .info__title {
   @extend .section-title;
-  margin-bottom: 30px;
+  margin-bottom: calc(30px + (42 - 30) * ((100vw - 320px) / (768 - 320)));
 }
