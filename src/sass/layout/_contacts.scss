@@ -1,5 +1,8 @@
 .contacts {
-  @include section(50, 40);
+  @include section(
+    calc(50px + (80 - 50) * ((100vw - 320px) / (768 - 320))),
+    calc(40px + (60 - 40) * ((100vw - 320px) / (768 - 320)))
+  );
   position: relative;
   background-color: #010b26;
   z-index: 0;
@@ -8,35 +11,39 @@
 
 .contacts::after {
   @extend %bg-ltr;
-  top: 45%;
+  top: calc(45% + (0 - 150) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__title {
   @extend .section-title;
-  margin-bottom: 30px;
+  margin-bottom: calc(30px + (42 - 30) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__list {
-  margin-bottom: 20px;
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (768 - 320)));
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__item:first-child {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 20px;
+  padding-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__item:last-child {
-  padding-top: 20px;
+  padding-top: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  padding-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__subitem:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__subtitle {
-  margin-bottom: 10px;
+  margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (768 - 320)));
 }
 
 .contacts__map {
-  border-radius: 5px;
+  width: calc(290px + (695 - 290) * ((100vw - 320px) / (768 - 320)));
+  height: calc(440px + (1055 - 440) * ((100vw - 320px) / (768 - 320)));
+  border-radius: calc(5px + (8 - 5) * ((100vw - 320px) / (768 - 320)));
 }
