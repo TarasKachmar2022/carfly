@@ -6,13 +6,68 @@
       простого доступу до програм смартфона за допомогою чотирьох спеціальних
       кнопок.
     </p>
-    <img
-      class="hero__img"
-      src="./images/hero/hero-img@3x.png"
-      alt="Магнітола"
-      width="693"
-      height="487"
-    />
+    <picture>
+      <!-- desktop screen -->
+      <!-- <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/gallery/gallery-2_d.webp    1x,
+              ./images/gallery/gallery-2@2x_d.webp 2x,
+              ./images/gallery/gallery-2@3x_d.webp 3x,
+              ./images/gallery/gallery-2@4x_d.webp 4x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/gallery/gallery-2_d.jpg    1x,
+              ./images/gallery/gallery-2@2x_d.jpg 2x,
+              ./images/gallery/gallery-2@3x_d.jpg 3x,
+              ./images/gallery/gallery-2@4x_d.jpg 4x
+            "
+            type="image/jpg"
+          /> -->
+
+      <!-- mobile screen -->
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/hero/hero-img-290.webp   290w,
+          ./images/hero/hero-img-435.webp   435w,
+          ./images/hero/hero-img-580.webp   580w,
+          ./images/hero/hero-img-693.webp   693w,
+          ./images/hero/hero-img-870.webp   870w,
+          ./images/hero/hero-img-1305.webp 1305w,
+          ./images/hero/hero-img-1386.webp 1386w,
+          ./images/hero/hero-img-2079.webp 2079w
+        "
+        sizes="(max-width: 320px) 290px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/hero/hero-img-290.png   290w,
+          ./images/hero/hero-img-435.png   435w,
+          ./images/hero/hero-img-580.png   580w,
+          ./images/hero/hero-img-693.png   693w,
+          ./images/hero/hero-img-870.png   870w,
+          ./images/hero/hero-img-1305.png 1305w,
+          ./images/hero/hero-img-1386.png 1386w,
+          ./images/hero/hero-img-2079.png 2079w
+        "
+        sizes="(max-width: 320px) 290px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
+        type="image/png"
+      />
+      <!-- fallback -->
+      <img
+        class="hero__img"
+        src="./images/hero/hero-img-2079.png"
+        alt="Магнітола"
+        loading="lazy"
+      />
+    </picture>
     <ul class="hero__list">
       <li class="hero__item">
         <div class="hero__thumb">
