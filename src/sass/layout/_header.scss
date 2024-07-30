@@ -13,8 +13,8 @@
 
 .header__thumb {
   @include section(
-    calc(30px + (50 - 30) * ((100vw - 320px) / (768 - 320))),
-    calc(30px + (50 - 30) * ((100vw - 320px) / (768 - 320)))
+    calc(30px + (45 - 30) * ((100vw - 320px) / (768 - 320))),
+    calc(30px + (45 - 30) * ((100vw - 320px) / (768 - 320)))
   );
   display: flex;
   align-items: center;
@@ -22,18 +22,28 @@
 }
 
 .logo {
-  width: calc(135px + (200 - 135) * ((100vw - 320px) / (768 - 320)));
-  height: calc(48px + (71 - 48) * ((100vw - 320px) / (768 - 320)));
+  width: calc(135px + (189 - 135) * ((100vw - 320px) / (768 - 320)));
+  height: calc(48px + (67 - 48) * ((100vw - 320px) / (768 - 320)));
 }
 
 .logo,
-.menu-btn {
+.burger-btn {
   fill: #ffffff;
 }
 
-.menu-btn {
+.burger-btn {
+  display: block;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger-btn__icon {
+  width: calc(28px + (40 - 28) * ((100vw - 320px) / (768 - 320)));
+  height: calc(20px + (29 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .mobile-menu {
@@ -95,18 +105,5 @@
 }
 
 .nav__link {
-  font-size: calc(16px + (38 - 16) * ((100vw - 320px) / (768 - 320)));
-}
-
-.menu-btn {
-  display: block;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.menu-btn__icon {
-  width: calc(28px + (40 - 28) * ((100vw - 320px) / (768 - 320)));
-  height: calc(20px + (29 - 20) * ((100vw - 320px) / (768 - 320)));
+  font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (768 - 320)));
 }

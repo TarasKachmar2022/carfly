@@ -1,14 +1,14 @@
 .section-title {
-  font-size: 32px;
+  font-size: calc(32px + (45 - 32) * ((100vw - 320px) / (768 - 320)));
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (768 - 320)));
 }
 
 .descr {
   font-weight: 200;
   font-family: var(--secondary-font);
-  font-size: 14px;
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (768 - 320)));
   color: rgba(255, 255, 255, 0.8);
 }

@@ -13,35 +13,36 @@
 .products__item {
   border-radius: 4px;
   background-color: #0b1c47;
-  padding: 20px;
+  padding: calc(20px + (48 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .products__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: calc(10px + (14 - 10) * ((100vw - 320px) / (768 - 320)));
 }
 
 .products__title {
   @extend .section-title;
-  margin-bottom: 30px;
+  margin-bottom: calc(30px + (42 - 30) * ((100vw - 320px) / (768 - 320)));
 }
 
 .product__img {
-  margin-bottom: 20px;
+  margin: 0 auto;
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .products__subtitle {
   @extend .subtitle;
-  margin-bottom: 10px;
+  margin-bottom: calc(10px + (14 - 10) * ((100vw - 320px) / (768 - 320)));
 }
 
 .products__descr {
   @extend .descr;
-  margin-bottom: 20px;
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .products__price {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
 
 .products__btn {

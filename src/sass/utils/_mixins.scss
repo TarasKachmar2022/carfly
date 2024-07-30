@@ -5,7 +5,10 @@
   letter-spacing: $ls;
 }
 
-@mixin section($pt: 50px, $pb: 50px) {
+@mixin section(
+  $pt: calc(50px + (80 - 50) * ((100vw - 320px) / (768 - 320))),
+  $pb: calc(50px + (80 - 50) * ((100vw - 320px) / (768 - 320)))
+) {
   padding-top: $pt;
   padding-bottom: $pb;
 }

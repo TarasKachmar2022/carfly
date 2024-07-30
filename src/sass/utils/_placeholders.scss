@@ -1,7 +1,6 @@
 %bg-ltr {
   position: absolute;
   content: '';
-  top: 50%;
   width: calc(983px + (1559 - 983) * ((100vw - 320px) / (768 - 320)));
   height: calc(174px + (400 - 174) * ((100vw - 320px) / (768 - 320)));
   z-index: -1;

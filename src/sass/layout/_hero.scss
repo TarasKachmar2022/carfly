@@ -11,6 +11,7 @@
 
 .hero::after {
   @extend %bg-ltr;
+  top: calc(50% + (75 - 200) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__container {
@@ -25,7 +26,7 @@
 .hero__descr {
   font-weight: light;
   font-family: var(--secondary-font);
-  font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (768 - 320)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (768 - 320)));
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 }
