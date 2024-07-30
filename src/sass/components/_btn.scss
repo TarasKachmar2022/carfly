@@ -1,5 +1,10 @@
 .btn {
-  @include font(700, 20px, 1.2, 0em);
+  @include font(
+    700,
+    calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320))),
+    1.2,
+    0em
+  );
   font-family: var(--main-font);
   display: inline-flex;
   align-items: center;
