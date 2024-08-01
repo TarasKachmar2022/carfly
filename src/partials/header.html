@@ -4,27 +4,45 @@
       <svg class="logo" width="135">
         <use href="./images/sprite.svg#icon-logo"></use>
       </svg>
-      <button class="burger-btn">
+      <button
+        class="burger-btn"
+        aria-label="Кнопка відкривання мобільного меню"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-btn
+      >
         <svg class="burger-btn__icon" width="28">
           <use href="./images/sprite.svg#icon-burger-btn"></use>
         </svg>
       </button>
     </div>
-    <div class="mobile-menu">
-      <button class="mobile-menu__close">
+    <div class="mobile-menu" data-menu>
+      <button
+        class="mobile-menu__close"
+        aria-label="Кнопка закривання мобільного меню"
+        data-menu-close-btn
+      >
         <svg class="mobile-menu__icon" width="15" height="15">
           <use href="./images/sprite.svg#icon-close"></use>
         </svg>
       </button>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="">Главная</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Подукция</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Где купить</a></li>
           <li class="nav__item">
-            <a class="nav__link" href="">Вопрос-ответ</a>
+            <a class="nav__link" href="#hero">Головна</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#products">Подукція</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#sellers">Де купити</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#info">Часті запитання</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">Контакти</a>
+          </li>
         </ul>
       </nav>
     </div>
