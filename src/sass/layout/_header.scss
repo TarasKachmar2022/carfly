@@ -4,6 +4,11 @@
   left: 0;
   width: 100%;
   z-index: 5;
+
+  &--no-transparency {
+    background-color: var(--background-header-cl);
+    backdrop-filter: blur(4px);
+  }
 }
 
 .header__container {
