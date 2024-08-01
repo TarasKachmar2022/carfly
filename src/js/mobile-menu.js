@@ -2,6 +2,7 @@ const mobileMenu = document.querySelector('[data-menu]');
 const openMenuBtn = document.querySelector('[data-menu-btn]');
 const closeMenuBtn = document.querySelector('[data-menu-close-btn]');
 const body = document.querySelector('[data-page]');
+const anchors = document.querySelectorAll('a.nav__link');
 
 const toggleMenu = () => {
   const isMenuOpen =
@@ -11,6 +12,11 @@ const toggleMenu = () => {
 
   body.classList.toggle('no-scroll');
 };
+
+anchors.forEach(item => {
+  if (!item) return;
+  item.addEventListener('click', toggleMenu);
+});
 
 openMenuBtn.addEventListener('click', toggleMenu);
 closeMenuBtn.addEventListener('click', toggleMenu);
