@@ -32,6 +32,10 @@
 
 .products__item:not(:last-child) {
   margin-bottom: calc(10px + (14 - 10) * ((100vw - 320px) / (768 - 320)));
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
 
 .products__wrap {
