@@ -1,6 +1,7 @@
 .swiper-sellers {
-  // width: 100vw;
-  // height: 384px;
+  // position: relative;
+  width: 1440px;
+  overflow: hidden;
 
   & .swiper-slide {
     // display: flex;
@@ -19,19 +20,44 @@
     height: calc(
       187px + (448 - 187) * ((100vw - 320px) / (768 - 320))
     ) !important;
+
+    @media screen and (min-width: 768px) {
+      width: 710px !important;
+      height: 354px !important;
+    }
   }
 
   & .swiper-wrapper {
+    // width: 1440px;
+    // overflow: hidden;
     // display: flex;
     // flex-wrap: wrap;
     // width: calc(290px + (695 - 290) * ((100vw - 320px) / (768 - 320)));
   }
 
   & .swiper-button__wraper {
-    display: block;
-    stroke: red;
+    position: absolute;
+    top: 40;
+    right: 240;
+    display: flex;
+    gap: 37px;
+
     @media screen and (max-width: 767px) {
       display: none;
+    }
+  }
+
+  & .swiper-button__prev,
+  & .swiper-button__next {
+    stroke: grey;
+    fill: transparent;
+    transition-property: stroke;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+      stroke: #fff;
     }
   }
 }
