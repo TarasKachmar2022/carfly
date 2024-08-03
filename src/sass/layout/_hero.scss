@@ -3,6 +3,7 @@
     calc(110px + (220 - 110) * ((100vw - 320px) / (768 - 320))),
     calc(50px + (80 - 50) * ((100vw - 320px) / (768 - 320)))
   );
+  @include rectangle-ltr();
   position: relative;
   background-color: #010b26;
   z-index: 0;
@@ -13,11 +14,6 @@
     width: 100%;
     height: 100vh;
   }
-}
-
-.hero::after {
-  @extend %bg-ltr;
-  top: calc(50% + (75 - 200) * ((100vw - 320px) / (768 - 320)));
 }
 
 .hero__container {

@@ -1,5 +1,6 @@
 .info {
   @include section();
+  @include rectangle-rtl();
   position: relative;
   background-color: #010b26;
   z-index: 0;
@@ -10,11 +11,6 @@
     width: 100%;
     height: 100vh;
   }
-}
-
-.info::after {
-  @extend %bg-rtl;
-  top: calc(20% + (0 - 150) * ((100vw - 320px) / (768 - 320)));
 }
 
 .info__title {
