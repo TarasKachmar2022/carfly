@@ -10,8 +10,8 @@ const swiper = new Swiper('.swiper-sellers', {
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button__next',
+    prevEl: '.swiper-button__prev',
   },
   breakpoints: {
     0: {
