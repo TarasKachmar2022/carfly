@@ -25,6 +25,34 @@
   }
 }
 
+@mixin circle {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 60%;
+    left: -45%;
+    border-radius: 100%;
+    background: linear-gradient(86.6deg, #ff0f87 -23.87%, #4612cc 124.07%),
+      #c4c4c4;
+    opacity: 0.5;
+    filter: blur(100px);
+    animation: heartbeat 5s ease infinite;
+  }
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
 @mixin rectangle-ltr {
   &:after {
     content: '';
