@@ -1,0 +1,52 @@
+.mobile-menu {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #010b26;
+    overflow-y: scroll;
+    transform: translateX(100%);
+    padding: calc(52px + (125 - 52) * ((100vw - 320px) / (768 - 320)))
+      calc(15px + (36 - 15) * ((100vw - 320px) / (768 - 320)));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+.mobile-menu__close {
+  position: absolute;
+  display: flex;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+
+  @media screen and (max-width: 767px) {
+    top: calc(46px + (92 - 46) * ((100vw - 320px) / (768 - 320)));
+    right: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu__icon {
+  width: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+  height: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+  fill: currentColor;
+}

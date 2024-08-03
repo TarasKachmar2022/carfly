@@ -7,6 +7,12 @@
   background-color: #010b26;
   z-index: 0;
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    @include section(360, 180);
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 .hero::after {
@@ -16,11 +22,30 @@
 
 .hero__container {
   @extend .container;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+    padding-top: 73px;
+  }
+}
+
+.hero__wrap {
+  // position: absolute;
+  // top: 50%;
+  // right: 0;
+  margin-top: -73px;
 }
 
 .hero__title {
   font-size: var(--fs-hero-title);
   margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+
+  @media screen and (min-width: 768px) {
+    font-size: 72px;
+    max-width: 588px;
+    margin-bottom: 30px;
+  }
 }
 
 .hero__descr {
@@ -28,12 +53,22 @@
   font-family: var(--secondary-font);
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (768 - 320)));
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  @media screen and (min-width: 768px) {
+    font-family: var(--third-font);
+    font-size: 20px;
+    max-width: 487px;
+  }
 }
 
 .hero__img {
-  // z-index: 10;
-  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
 }
 
 .hero__list {
@@ -41,7 +76,10 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  margin-bottom: calc(30px + (45 - 30) * ((100vw - 320px) / (768 - 320)));
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: calc(30px + (45 - 30) * ((100vw - 320px) / (768 - 320)));
+  }
 }
 
 .hero__thumb {
@@ -50,20 +88,49 @@
   border-radius: 50%;
   padding: calc(10px + (20 - 10) * ((100vw - 320px) / (768 - 320)));
   margin-bottom: calc(11px + (17 - 11) * ((100vw - 320px) / (768 - 320)));
+
+  @media screen and (min-width: 768px) {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .hero__icon {
-  @extend .btn__icon;
+  width: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  height: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+  fill: currentColor;
+
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .hero__description {
   font-weight: 500;
   font-family: 'DIN Pro Medium', sans-serif;
   font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (768 - 320)));
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .hero__btn {
   @extend .btn;
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
-  width: 100%;
+  min-width: 100%;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 62;
+    left: 240;
+    font-size: 20px;
+    min-width: 237px;
+    height: 65px;
+  }
+}
+
+.hero__btn-icon {
+  @extend .btn__icon;
 }

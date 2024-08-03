@@ -15,3 +15,41 @@
   @extend .section-title;
   margin-bottom: calc(30px + (42 - 30) * ((100vw - 320px) / (768 - 320)));
 }
+
+.sellers__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (768 - 320)));
+  width: calc(290px + (695 - 290) * ((100vw - 320px) / (768 - 320)));
+  height: calc(187px + (448 - 187) * ((100vw - 320px) / (768 - 320)));
+  background-color: #0b1c47;
+  padding: calc(40px + (80 - 40) * ((100vw - 320px) / (768 - 320)))
+    calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320)));
+  text-align: center;
+}
+
+.sellers__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sellers__img {
+  width: calc(250px + (480 - 250) * ((100vw - 320px) / (768 - 320)));
+}
+
+.sellers__icon {
+  width: calc(60px + (150 - 60) * ((100vw - 320px) / (768 - 320)));
+  height: calc(60px + (150 - 60) * ((100vw - 320px) / (768 - 320)));
+}
+
+.sellers__name {
+  font-size: calc(32px + (77 - 32) * ((100vw - 320px) / (768 - 320)));
+  margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (768 - 320)));
+}
+
+.sellers__email {
+  font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (768 - 320)));
+}

@@ -14,6 +14,11 @@
 .header__container {
   @extend .container;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__thumb {
@@ -24,11 +29,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    @include section(70, 70);
+  }
 }
 
 .logo {
-  width: calc(135px + (189 - 135) * ((100vw - 320px) / (768 - 320)));
-  height: calc(48px + (67 - 48) * ((100vw - 320px) / (768 - 320)));
+  @media screen and (max-width: 767px) {
+    width: calc(135px + (189 - 135) * ((100vw - 320px) / (768 - 320)));
+    height: calc(48px + (67 - 48) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 176px;
+    height: 62px;
+  }
 }
 
 .logo,
@@ -49,68 +65,4 @@
 .burger-btn__icon {
   width: calc(28px + (40 - 28) * ((100vw - 320px) / (768 - 320)));
   height: calc(20px + (29 - 20) * ((100vw - 320px) / (768 - 320)));
-}
-
-.mobile-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  background-color: #010b26;
-  overflow-y: scroll;
-  transform: translateX(100%);
-  padding: calc(52px + (125 - 52) * ((100vw - 320px) / (768 - 320)))
-    calc(15px + (36 - 15) * ((100vw - 320px) / (768 - 320)));
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-    transform: translateX(0);
-  }
-}
-
-.mobile-menu__close {
-  position: absolute;
-  top: calc(46px + (92 - 46) * ((100vw - 320px) / (768 - 320)));
-  right: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
-  display: flex;
-  border: none;
-  color: #ffffff;
-  background-color: transparent;
-}
-
-.mobile-menu__icon {
-  width: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
-  height: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
-  fill: currentColor;
-}
-
-.nav {
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    // display: none;
-  }
-}
-
-.nav__list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    gap: 60px;
-  }
-}
-
-.nav__item {
-  @media screen and (max-width: 767px) {
-    margin-bottom: calc(40px + (60 - 40) * ((100vw - 320px) / (768 - 320)));
-  }
-}
-
-.nav__link {
-  font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (768 - 320)));
 }
