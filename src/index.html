@@ -1,22 +1,545 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carfly</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-  </head>
-  <body data-page>
-    <include src="./partials/header.html"></include>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carfly</title>
+  <link rel="stylesheet" href="./sass/utils/jquery.pagepiling.scss" />
+  <link rel="stylesheet" href="./sass/index.scss" />
+</head>
+<body data-page>
+  <include src="./partials/header.html"></include>
 
-    <main>
-      <include src="./partials/hero.html"></include>
-      <include src="./partials/products.html"></include>
-      <include src="./partials/sellers.html"></include>
-      <include src="./partials/info.html"></include>
-      <include src="./partials/contacts.html"></include>
-    </main>
+  <main>
+    <div id="pagepiling">
+      <!-- <include src="./partials/hero.html"></include> -->
+      <div class="section">
+        <section class="hero" id="hero">
+          <div class="hero__container">
+            <div>
+              <h1 class="hero__title">Автомагнітола CarFly M320</h1>
+              <p class="hero__descr">
+                Приймач для смартфона SPH-10BT Pioneer створений для безпечного та
+                простого доступу до програм смартфона за допомогою чотирьох спеціальних
+                кнопок.
+              </p>
+            </div>
+            <div class="hero__wrap">
+              <picture>
+                <!-- desktop screen -->
+                <source media="(min-width: 768px)" srcset="
+            ./images/hero/hero-img-m-290.webp   290w,
+            ./images/hero/hero-img-m-435.webp   435w,
+            ./images/hero/hero-img-m-580.webp   580w,
+            ./images/hero/hero-img-m-693.webp   693w,
+            ./images/hero/hero-img-m-870.webp   870w,
+            ./images/hero/hero-img-m-1305.webp 1305w,
+            ./images/hero/hero-img-m-1386.webp 1386w,
+            ./images/hero/hero-img-m-2079.webp 2079w
+          " sizes="(min-width: 1920px) 589px, (min-width: 768px) 290px, 100vw" type="image/webp" />
+                <source media="(min-width: 768px)" srcset="
+            ./images/hero/hero-img-m-290.png   290w,
+            ./images/hero/hero-img-m-435.png   435w,
+            ./images/hero/hero-img-m-580.png   580w,
+            ./images/hero/hero-img-m-693.png   693w,
+            ./images/hero/hero-img-m-870.png   870w,
+            ./images/hero/hero-img-m-1305.png 1305w,
+            ./images/hero/hero-img-m-1386.png 1386w,
+            ./images/hero/hero-img-m-2079.png 2079w
+          " sizes="(min-width: 1920px) 589px, (min-width: 768px) 290px, 100vw" type="image/png" />
 
-    <script type="module" src="./index.js"></script>
-  </body>
+                <!-- mobile screen -->
+                <source media="(max-width: 767px)" srcset="
+            ./images/hero/hero-img-m-290.webp   290w,
+            ./images/hero/hero-img-m-435.webp   435w,
+            ./images/hero/hero-img-m-580.webp   580w,
+            ./images/hero/hero-img-m-693.webp   693w,
+            ./images/hero/hero-img-m-870.webp   870w,
+            ./images/hero/hero-img-m-1305.webp 1305w,
+            ./images/hero/hero-img-m-1386.webp 1386w,
+            ./images/hero/hero-img-m-2079.webp 2079w
+          " sizes="(max-width: 320px) 290px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
+                  type="image/webp" />
+                <source media="(max-width: 767px)" srcset="
+            ./images/hero/hero-img-m-290.png   290w,
+            ./images/hero/hero-img-m-435.png   435w,
+            ./images/hero/hero-img-m-580.png   580w,
+            ./images/hero/hero-img-m-693.png   693w,
+            ./images/hero/hero-img-m-870.png   870w,
+            ./images/hero/hero-img-m-1305.png 1305w,
+            ./images/hero/hero-img-m-1386.png 1386w,
+            ./images/hero/hero-img-m-2079.png 2079w
+          " sizes="(max-width: 320px) 290px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
+                  type="image/png" />
+                <!-- fallback -->
+                <img class="hero__img" src="./images/hero/hero-img-m-2079.png" alt="Магнітола" loading="lazy" />
+              </picture>
+              <ul class="hero__list">
+                <li class="hero__item">
+                  <div class="hero__thumb">
+                    <svg class="hero__icon" width="20">
+                      <use href="./images/sprite.svg#icon-android"></use>
+                    </svg>
+                  </div>
+                  <p class="hero__description">Android 8.2</p>
+                </li>
+                <li class="hero__item">
+                  <div class="hero__thumb">
+                    <svg class="hero__icon" width="20">
+                      <use href="./images/sprite.svg#icon-size"></use>
+                    </svg>
+                  </div>
+                  <p class="hero__description">180x50x160 мм</p>
+                </li>
+                <li class="hero__item">
+                  <div class="hero__thumb">
+                    <svg class="hero__icon" width="20">
+                      <use href="./images/sprite.svg#icon-sound-bars-pulse"></use>
+                    </svg>
+                  </div>
+                  <p class="hero__description">4x22 Вт</p>
+                </li>
+              </ul>
+            </div>
+            <button class="hero__btn">
+              Детальніше
+              <svg class="hero__btn-icon" width="24">
+                <use href="./images/sprite.svg#icon-pdf-file"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </div>
+      <!-- <include src="./partials/products.html"></include> -->
+      <div class="section">
+        <section class="products" id="products">
+          <div class="container">
+            <h2 class="products__title">Продукція</h2>
+            <ul class="products__list">
+              <li class="products__item">
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 768px)" srcset="
+                ./images/products/products-img01-m-250.webp   250w,
+                ./images/products/products-img01-m-375.webp   375w,
+                ./images/products/products-img01-m-500.webp   500w,
+                ./images/products/products-img01-m-600.webp   600w,
+                ./images/products/products-img01-m-750.webp   750w,
+                ./images/products/products-img01-m-1125.webp 1125w,
+                ./images/products/products-img01-m-1200.webp 1200w,
+                ./images/products/products-img01-m-1800.webp 1800w
+              " sizes="(min-width: 1920px) 215px, (min-width: 768px) 215px,  100vw" type="image/webp" />
+                  <source media="(min-width: 768px)" srcset="
+                ./images/products/products-img01-m-250.png   250w,
+                ./images/products/products-img01-m-375.png   375w,
+                ./images/products/products-img01-m-500.png   500w,
+                ./images/products/products-img01-m-600.png   600w,
+                ./images/products/products-img01-m-750.png   750w,
+                ./images/products/products-img01-m-1125.png 1125w,
+                ./images/products/products-img01-m-1200.png 1200w,
+                ./images/products/products-img01-m-1800.png 1800w
+              " sizes="(min-width: 1920px) 215px, (min-width: 768px) 215px,  100vw" type="image/png" />
+
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                ./images/products/products-img01-m-250.webp   250w,
+                ./images/products/products-img01-m-375.webp   375w,
+                ./images/products/products-img01-m-500.webp   500w,
+                ./images/products/products-img01-m-600.webp   600w,
+                ./images/products/products-img01-m-750.webp   750w,
+                ./images/products/products-img01-m-1125.webp 1125w,
+                ./images/products/products-img01-m-1200.webp 1200w,
+                ./images/products/products-img01-m-1800.webp 1800w
+              " sizes="(max-width: 320px) 250px, (max-width: 480px) 375px, (max-width: 767px) 600px, 100vw"
+                    type="image/webp" />
+                  <source media="(max-width: 767px)" srcset="
+                ./images/products/products-img01-m-250.png   250w,
+                ./images/products/products-img01-m-375.png   375w,
+                ./images/products/products-img01-m-500.png   500w,
+                ./images/products/products-img01-m-600.png   600w,
+                ./images/products/products-img01-m-750.png   750w,
+                ./images/products/products-img01-m-1125.png 1125w,
+                ./images/products/products-img01-m-1200.png 1200w,
+                ./images/products/products-img01-m-1800.png 1800w
+              " sizes="(max-width: 320px) 250px, (max-width: 480px) 375px, (max-width: 767px) 600px, 100vw"
+                    type="image/png" />
+                  <!-- fallback -->
+                  <img class="products__img" src="./images/products/products-img01-m-1800.png" alt="Магнітола"
+                    loading="lazy" />
+                </picture>
+                <div class="products__wrap">
+                  <div>
+                    <h3 class="products__subtitle">Автомагнітола CarFly M320</h3>
+                    <p class="products__descr">
+                      Приймач для смартфона SPH-10BT Pioneer створений для безпечного
+                      та простого доступу до програм смартфона за допомогою чотирьох
+                      спеціальних кнопок.
+                    </p>
+                  </div>
+                  <p class="products__price">24 999 грн</p>
+                  <button class="btn">
+                    Детальніше
+                    <svg class="btn__icon" width="24">
+                      <use href="./images/sprite.svg#icon-pdf-file"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item">
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 768px)" srcset="
+                ./images/products/products-img02-m-250.webp   250w,
+                ./images/products/products-img02-m-375.webp   375w,
+                ./images/products/products-img02-m-500.webp   500w,
+                ./images/products/products-img02-m-600.webp   600w,
+                ./images/products/products-img02-m-750.webp   750w,
+                ./images/products/products-img02-m-1125.webp 1125w,
+                ./images/products/products-img02-m-1200.webp 1200w,
+                ./images/products/products-img02-m-1800.webp 1800w
+              " sizes="(min-width: 1920px) 215px, (min-width: 768px) 215px,  100vw" type="image/webp" />
+                  <source media="(min-width: 768px)" srcset="
+                ./images/products/products-img02-m-250.png   250w,
+                ./images/products/products-img02-m-375.png   375w,
+                ./images/products/products-img02-m-500.png   500w,
+                ./images/products/products-img02-m-600.png   600w,
+                ./images/products/products-img02-m-750.png   750w,
+                ./images/products/products-img02-m-1125.png 1125w,
+                ./images/products/products-img02-m-1200.png 1200w,
+                ./images/products/products-img02-m-1800.png 1800w
+              " sizes="(min-width: 1920px) 215px, (min-width: 768px) 215px,  100vw" type="image/png" />
+
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                ./images/products/products-img02-m-250.webp   250w,
+                ./images/products/products-img02-m-375.webp   375w,
+                ./images/products/products-img02-m-500.webp   500w,
+                ./images/products/products-img02-m-600.webp   600w,
+                ./images/products/products-img02-m-750.webp   750w,
+                ./images/products/products-img02-m-1125.webp 1125w,
+                ./images/products/products-img02-m-1200.webp 1200w,
+                ./images/products/products-img02-m-1800.webp 1800w
+              " sizes="(max-width: 320px) 250px, (max-width: 480px) 375px, (max-width: 767px) 600px, 100vw"
+                    type="image/webp" />
+                  <source media="(max-width: 767px)" srcset="
+                ./images/products/products-img02-m-250.png   250w,
+                ./images/products/products-img02-m-375.png   375w,
+                ./images/products/products-img02-m-500.png   500w,
+                ./images/products/products-img02-m-600.png   600w,
+                ./images/products/products-img02-m-750.png   750w,
+                ./images/products/products-img02-m-1125.png 1125w,
+                ./images/products/products-img02-m-1200.png 1200w,
+                ./images/products/products-img02-m-1800.png 1800w
+              " sizes="(max-width: 320px) 250px, (max-width: 480px) 375px, (max-width: 767px) 600px, 100vw"
+                    type="image/png" />
+                  <!-- fallback -->
+                  <img class="products__img" src="./images/products/products-img02-m-1800.png" alt="Магнітола"
+                    loading="lazy" />
+                </picture>
+                <div class="products__wrap">
+                  <div>
+                    <h3 class="products__subtitle">Автомагнітола CarFly M320</h3>
+                    <p class="products__descr">
+                      Приймач для смартфона SPH-10BT Pioneer створений для безпечного
+                      та простого доступу до програм смартфона за допомогою чотирьох
+                      спеціальних кнопок.
+                    </p>
+                  </div>
+                  <p class="products__price">24 999 грн</p>
+                  <button class="btn">
+                    Детальніше
+                    <svg class="btn__icon" width="24">
+                      <use href="./images/sprite.svg#icon-pdf-file"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item">
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 768px)" srcset="
+                ./images/products/products-img03-m-250.webp   250w,
+                ./images/products/products-img03-m-375.webp   375w,
+                ./images/products/products-img03-m-500.webp   500w,
+                ./images/products/products-img03-m-600.webp   600w,
+                ./images/products/products-img03-m-750.webp   750w,
+                ./images/products/products-img03-m-1125.webp 1125w,
+                ./images/products/products-img03-m-1200.webp 1200w,
+                ./images/products/products-img03-m-1800.webp 1800w
+              " sizes="(min-width: 1920px) 215px, (min-width: 768px) 215px,  100vw" type="image/webp" />
+                  <source media="(min-width: 768px)" srcset="
+                ./images/products/products-img03-m-250.png   250w,
+                ./images/products/products-img03-m-375.png   375w,
+                ./images/products/products-img03-m-500.png   500w,
+                ./images/products/products-img03-m-600.png   600w,
+                ./images/products/products-img03-m-750.png   750w,
+                ./images/products/products-img03-m-1125.png 1125w,
+                ./images/products/products-img03-m-1200.png 1200w,
+                ./images/products/products-img03-m-1800.png 1800w
+              " sizes="(min-width: 1920px) 215px, (min-width: 768px) 215px,  100vw" type="image/png" />
+
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                ./images/products/products-img03-m-250.webp   250w,
+                ./images/products/products-img03-m-375.webp   375w,
+                ./images/products/products-img03-m-500.webp   500w,
+                ./images/products/products-img03-m-600.webp   600w,
+                ./images/products/products-img03-m-750.webp   750w,
+                ./images/products/products-img03-m-1125.webp 1125w,
+                ./images/products/products-img03-m-1200.webp 1200w,
+                ./images/products/products-img03-m-1800.webp 1800w
+              " sizes="(max-width: 320px) 250px, (max-width: 480px) 375px, (max-width: 767px) 600px, 100vw"
+                    type="image/webp" />
+                  <source media="(max-width: 767px)" srcset="
+                ./images/products/products-img03-m-250.png   250w,
+                ./images/products/products-img03-m-375.png   375w,
+                ./images/products/products-img03-m-500.png   500w,
+                ./images/products/products-img03-m-600.png   600w,
+                ./images/products/products-img03-m-750.png   750w,
+                ./images/products/products-img03-m-1125.png 1125w,
+                ./images/products/products-img03-m-1200.png 1200w,
+                ./images/products/products-img03-m-1800.png 1800w
+              " sizes="(max-width: 320px) 250px, (max-width: 480px) 375px, (max-width: 767px) 600px, 100vw"
+                    type="image/png" />
+                  <!-- fallback -->
+                  <img class="products__img" src="./images/products/products-img03-m-1800.png" alt="Магнітола"
+                    loading="lazy" />
+                </picture>
+                <div class="products__wrap">
+                  <div>
+                    <h3 class="products__subtitle">Автомагнітола CarFly M320</h3>
+                    <p class="products__descr">
+                      Приймач для смартфона SPH-10BT Pioneer створений для безпечного
+                      та простого доступу до програм смартфона за допомогою чотирьох
+                      спеціальних кнопок.
+                    </p>
+                  </div>
+                  <p class="products__price">24 999 грн</p>
+                  <button class="btn">
+                    Детальніше
+                    <svg class="btn__icon" width="24">
+                      <use href="./images/sprite.svg#icon-pdf-file"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- <include src="./partials/sellers.html"></include> -->
+      <div class="section">
+        <section class="sellers" id="sellers">
+          <div class="sellers__container">
+            <h2 class="sellers__title">Де купити?</h2>
+            <div class="swiper-sellers">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="sellers__link" href="https://rozetka.com.ua/" target="_blank" rel="noopener noreferrer">
+                    <div class="sellers__item">
+                      <div class="sellers__wrap">
+                        <svg class="sellers__icon" width="60" height="60">
+                          <use href="./images/sprite.svg#icon-rozetka-logo"></use>
+                        </svg>
+                        <span class="sellers__name">Rozetka</span>
+                      </div>
+                      <p class="sellers__email">www.rozetka.com.ua</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sellers__link" href="https://allo.ua/" target="_blank" rel="noopener noreferrer">
+                    <div class="sellers__item">
+                      <div class="sellers__wrap">
+                        <img class="sellers__img" src="./images/sellers/allo-logo.png" alt="Алло" width="170">
+                      </div>
+                      <p class="sellers__email">www.allo.ua</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sellers__link" href="https://www.foxtrot.com.ua/" target="_blank" rel="noopener noreferrer">
+                    <div class="sellers__item">
+                      <div class="sellers__wrap">
+                        <img class="sellers__img" src="./images/sellers/foxtrot-logo.png" alt="Фокстрот" width="250">
+                      </div>
+                      <p class="sellers__email">www.foxtrot.com.ua</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="sellers__link" href="https://eldorado.ua/" target="_blank" rel="noopener noreferrer">
+                    <div class="sellers__item">
+                      <div class="sellers__wrap">
+                        <img class="sellers__img" src="./images/sellers/eldorado-logo.png" alt="Ельдорадо" width="250">
+                      </div>
+                      <p class="sellers__email">www.eldorado.ua</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button__wraper">
+                <div class="swiper-button__prev">
+                  <svg class="swiper-button__icon" width="92" height="12">
+                    <use href="./images/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button__next">
+                  <svg class="swiper-button__icon" width="92" height="12">
+                    <use href="./images/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+        </section>
+      </div>
+      <!-- <include src="./partials/info.html"></include> -->
+      <div class="section">
+        <section class="info" id="info">
+          <div class="container">
+            <h2 class="info__title">Часті запитання</h2>
+
+            <ul class="accordion">
+              <li class="accordion__item">
+                <button class="accordion__btn">
+                  <span class="accordion__header">
+                    Який розмір пристрою?
+                  </span>
+                  <svg class="accordion__icon" width="22" height="11">
+                    <use href="./images/sprite.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__thumb">
+                  <p class="accordion__descr">
+                    Розмір пристрою 178х100, діагональ 7 дюймів.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">
+                  <span class="accordion__header">
+                    Чи можу я самостійно встановити?
+                  </span>
+                  <svg class="accordion__icon" width="22" height="11">
+                    <use href="./images/sprite.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__thumb">
+                  <p class="accordion__descr">
+                    Пристрій універсальний, підійде на більшість автомобілів. У випадку деяких автомобілів стандартного
+                    комплекту проводів буде цілком достатньо.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">
+                  <span class="accordion__header">
+                    Після встановлення залишилися проміжки навколо пристрою, що з цим робити?
+                  </span>
+                  <svg class="accordion__icon" width="22" height="11">
+                    <use href="./images/sprite.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__thumb">
+                  <p class="accordion__descr">
+                    У деяких автомобілях для правильної установки необхідна перехідна рамка, щоб прибрати всі зазори та
+                    нерівності. Для уточнення зверніться до техпідтримки.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">
+                  <span class="accordion__header">
+                    Чи можливо запустити штатний підсилювач?
+                  </span>
+                  <svg class="accordion__icon" width="22" height="11">
+                    <use href="./images/sprite.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__thumb">
+                  <p class="accordion__descr">
+                    Можливо, для більшості автомобілів передбачений Canbus, який купується окремо під модель автомобіля,
+                    де є
+                    заводський підсилювач звуку.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <button class="accordion__btn">
+                  <span class="accordion__header">
+                    Чи працюватимуть у мене кнопки на кермі?
+                  </span>
+                  <svg class="accordion__icon" width="22" height="11">
+                    <use href="./images/sprite.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__thumb">
+                  <p class="accordion__descr">
+                    Найчастіше для підключення кнопок на кермі достатньо набору дротів із комплекту пристрою, але
+                    трапляються
+                    випадки, де необхідний Canbus. Для уточнення за моделлю вашого автомобіля, напишіть у техпідтримку.
+                  </p>
+                </div>
+              </li>
+          </div>
+        </section>
+      </div>
+      <!-- <include src="./partials/contacts.html"></include> -->
+      <div class="section">
+        <section class="contacts" id="contacts">
+          <div class="contacts__container">
+            <div class="contacts__wrap">
+              <h2 class="contacts__title">Контакти</h2>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <h3 class="contacts__subtitle">Центральний офіс:</h3>
+                  <address>
+                    <ul class="contacts__sublist">
+                      <li class="contacts__subitem">
+                        <a href="https://maps.app.goo.gl/8uB5yxPXKVD9QiLn8" target="_blank"
+                          rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
+                      </li>
+                      <li class="contacts__subitem">
+                        <a href="tel:+380961111111">+38 096 111 11 11</a>
+                      </li>
+                      <li class="contacts__subitem">
+                        <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                      </li>
+                    </ul>
+                  </address>
+                </li>
+                <li class="contacts__item">
+                  <h3 class="contacts__subtitle">Сервісний центр:</h3>
+                  <address>
+                    <ul>
+                      <li class="contacts__subitem">
+                        <a href="https://maps.app.goo.gl/8uB5yxPXKVD9QiLn8" target="_blank"
+                          rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
+                      </li>
+                      <li class="contacts__subitem">
+                        <a href="tel:+380961111111">+38 096 111 11 11</a>
+                      </li>
+                      <li class="contacts__subitem">
+                        <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                      </li>
+                    </ul>
+                  </address>
+                </li>
+              </ul>
+            </div>
+            <iframe class="contacts__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.8111700784616!2d30.438513599999993!3d50.5190802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d29b9e369069%3A0xff64663a5fd75cd5!2z0LLRg9C70LjRhtGPINCb0LXRgdGWINCj0LrRgNCw0ZfQvdC60LgsIDI2LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1722286505551!5m2!1suk!2sua"
+              width="290" height="440" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.pagepiling.min.js"></script>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>

@@ -7,7 +7,6 @@ function changeHeaderBackground() {
   const viewportWidth = window.innerWidth;
 
   if (viewportWidth >= 768) {
-    console.log('no');
     return;
   } else {
     if (pageOffset > headerOffsetTrigger) {

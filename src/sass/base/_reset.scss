@@ -1,4 +1,9 @@
 // Частковий ресет
+html {
+  @media screen and (max-width: 767px) {
+    overflow: auto;
+  }
+}
 
 body {
   font-family: var(--main-font);
