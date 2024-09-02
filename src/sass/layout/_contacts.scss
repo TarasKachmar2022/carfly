@@ -12,7 +12,11 @@
 
   @media screen and (min-width: 768px) {
     @include section(250, 150);
-    width: 100%;
+    @include section(
+      calc(250px + (200 - 250) * ((100vw - 1920px) / (768 - 1920))),
+      calc(150px + (100 - 150) * ((100vw - 1920px) / (768 - 1920)))
+    );
+    width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;

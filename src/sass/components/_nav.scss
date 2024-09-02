@@ -2,12 +2,19 @@
   @media screen and (max-width: 767px) {
     position: absolute;
   }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+  }
 }
 
 .nav__list {
   @media screen and (min-width: 768px) {
     display: flex;
-    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: calc(60px + (30 - 60) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -23,7 +30,10 @@
   }
 
   @media screen and (min-width: 768px) {
-    @include section(70, 70);
+    @include section(
+      calc(70px + (50 - 70) * ((100vw - 1920px) / (768 - 1920))),
+      calc(70px + (50 - 70) * ((100vw - 1920px) / (768 - 1920)))
+    );
     font-family: var(--third-font);
     font-size: 20px;
   }

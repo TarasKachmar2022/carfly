@@ -23,6 +23,16 @@
   transition-timing-function: var(--timing-function);
 
   @media screen and (min-width: 768px) {
+    font-size: calc(20px + (14 - 20) * ((100vw - 1920px) / (768 - 1920)));
+    min-width: calc(237px + (150 - 237) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(65px + (49 - 65) * ((100vw - 1920px) / (768 - 1920)));
+    padding-top: calc(20px + (10 - 20) * ((100vw - 1920px) / (768 - 1920)));
+    padding-right: calc(40px + (20 - 40) * ((100vw - 1920px) / (768 - 1920)));
+    padding-bottom: calc(20px + (10 - 20) * ((100vw - 1920px) / (768 - 1920)));
+    padding-left: calc(40px + (20 - 40) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 20px;
     min-width: 237px;
     height: 65px;
@@ -44,6 +54,11 @@
   fill: currentColor;
 
   @media screen and (min-width: 768px) {
+    width: calc(20px + (18 - 20) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(20px + (18 - 20) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     width: 20px;
     height: 20px;
   }

@@ -2,6 +2,10 @@
   font-size: calc(32px + (45 - 32) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    font-size: calc(48px + (36 - 48) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 48px;
   }
 }
@@ -10,6 +14,10 @@
   font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    font-size: calc(22px + (16 - 22) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 22px;
   }
 }
@@ -21,6 +29,10 @@
   color: rgba(255, 255, 255, 0.8);
 
   @media screen and (min-width: 768px) {
+    font-size: calc(14px + (10 - 14) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 14px;
   }
 }

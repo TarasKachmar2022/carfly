@@ -9,6 +9,10 @@
 
   @media screen and (min-width: 768px) {
     @include section(400, 226);
+    @include section(
+      calc(360px + (144 - 360) * ((100vw - 1920px) / (768 - 1920))),
+      calc(180px + (72 - 180) * ((100vw - 1920px) / (768 - 1920)))
+    );
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -53,7 +57,7 @@
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    width: 710px;
+    width: calc(710px + (284 - 710) * ((100vw - 1920px) / (768 - 1920)));
     height: 354px;
     padding: 80px;
   }
