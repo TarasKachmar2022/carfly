@@ -9,7 +9,7 @@
 
   @media screen and (min-width: 768px) {
     @include section(
-      calc(350px + (200 - 350) * ((100vw - 1920px) / (768 - 1920))),
+      calc(350px + (150 - 350) * ((100vw - 1920px) / (768 - 1920))),
       calc(84px + (60 - 84) * ((100vw - 1920px) / (768 - 1920)))
     );
     width: 100%;
@@ -22,6 +22,10 @@
         rgba(1, 11, 38, 0.95)
       ),
       url('../images/section-bg/section-bg.jpg');
+  }
+
+  @media screen and (min-width: 1920px) {
+    @include section(350, 84);
   }
 }
 

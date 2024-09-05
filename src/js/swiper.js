@@ -24,7 +24,7 @@ const swiper = new Swiper('.swiper-sellers', {
     768: {
       direction: 'horizontal',
       speed: 2000,
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       allowTouchMove: true,
       loop: true,
       spaceBetween: 20,

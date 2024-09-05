@@ -8,6 +8,10 @@
 
   @media screen and (min-width: 768px) {
     border-radius: 5px;
+    margin-bottom: calc(10px + (8 - 10) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     margin-bottom: 10px;
   }
 }
@@ -26,8 +30,8 @@
 
   @media screen and (min-width: 768px) {
     border-radius: 5px;
-    padding: calc(25px + (20 - 25) * ((100vw - 1920px) / (768 - 1920)))
-      calc(40px + (30 - 40) * ((100vw - 1920px) / (768 - 1920)));
+    padding: calc(25px + (10 - 25) * ((100vw - 1920px) / (768 - 1920)))
+      calc(40px + (20 - 40) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 

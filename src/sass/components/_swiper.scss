@@ -1,6 +1,6 @@
 .swiper-sellers {
   // position: relative;
-  width: calc(1440px + (576 - 1440) * ((100vw - 1920px) / (768 - 1920)));
+  width: calc(1440px + (708 - 1440) * ((100vw - 1920px) / (768 - 1920)));
   overflow: hidden;
 
   & .swiper-slide {
@@ -26,7 +26,7 @@
         710px + (350 - 710) * ((100vw - 1920px) / (768 - 1920))
       ) !important;
       height: calc(
-        354px + (150 - 354) * ((100vw - 1920px) / (768 - 1920))
+        354px + (175 - 354) * ((100vw - 1920px) / (768 - 1920))
       ) !important;
     }
   }

@@ -8,9 +8,8 @@
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
-    @include section(400, 226);
     @include section(
-      calc(360px + (144 - 360) * ((100vw - 1920px) / (768 - 1920))),
+      calc(400px + (170 - 400) * ((100vw - 1920px) / (768 - 1920))),
       calc(180px + (72 - 180) * ((100vw - 1920px) / (768 - 1920)))
     );
     width: 100%;
@@ -23,6 +22,10 @@
         rgba(1, 11, 38, 0.95)
       ),
       url('../images/section-bg/section-bg.jpg');
+  }
+
+  @media screen and (min-width: 1920px) {
+    @include section(400, 226);
   }
 }
 
@@ -57,9 +60,9 @@
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    width: calc(710px + (284 - 710) * ((100vw - 1920px) / (768 - 1920)));
-    height: 354px;
-    padding: 80px;
+    width: calc(710px + (350 - 710) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(354px + (175 - 354) * ((100vw - 1920px) / (768 - 1920)));
+    padding: calc(80px + (30 - 80) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -73,6 +76,10 @@
   width: calc(250px + (480 - 250) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    width: calc(400px + (250 - 400) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     width: 400px;
   }
 }
@@ -82,6 +89,11 @@
   height: calc(60px + (150 - 60) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    width: calc(100px + (50 - 100) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(100px + (50 - 100) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     width: 100px;
     height: 100px;
   }
@@ -92,6 +104,10 @@
   margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    font-size: calc(72px + (48 - 72) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 72px;
   }
 }
@@ -100,6 +116,10 @@
   font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    font-size: calc(36px + (24 - 36) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 36px;
   }
 }
