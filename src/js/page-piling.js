@@ -5,6 +5,7 @@ $(document).ready(function () {
     $('#pagepiling').pagepiling({
       menu: '#myMenu',
       anchors: ['hero', 'products', 'sellers', 'info', 'contacts'],
+      navigation: false,
     });
   }
 });

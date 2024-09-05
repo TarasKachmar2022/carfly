@@ -32,9 +32,13 @@
 
   @media screen and (min-width: 768px) {
     @include section(
-      calc(50px + (45 - 50) * ((100vw - 1920px) / (768 - 1920))),
-      calc(50px + (45 - 50) * ((100vw - 1920px) / (768 - 1920)))
+      calc(50px + (25 - 50) * ((100vw - 1920px) / (768 - 1920))),
+      calc(50px + (25 - 50) * ((100vw - 1920px) / (768 - 1920)))
     );
+  }
+
+  @media screen and (min-width: 1920px) {
+    @include section(50px, 50px);
   }
 }
 
@@ -45,8 +49,13 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: calc(176px + (130 - 176) * ((100vw - 1920px) / (768 - 1920)));
-    height: calc(62px + (46 - 62) * ((100vw - 1920px) / (768 - 1920)));
+    width: calc(176px + (100 - 176) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(62px + (36 - 62) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 176px;
+    height: 62px;
   }
 }
 

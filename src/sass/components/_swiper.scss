@@ -23,7 +23,7 @@
 
     @media screen and (min-width: 768px) {
       width: calc(
-        710px + (350 - 710) * ((100vw - 1920px) / (768 - 1920))
+        710px + (340 - 710) * ((100vw - 1920px) / (768 - 1920))
       ) !important;
       height: calc(
         354px + (175 - 354) * ((100vw - 1920px) / (768 - 1920))
@@ -40,14 +40,23 @@
   }
 
   & .swiper-button__wraper {
-    position: absolute;
-    top: 40;
-    right: 240;
     display: flex;
     gap: 37px;
 
     @media screen and (max-width: 767px) {
       display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 40;
+      right: calc(240px + (20 - 240) * ((100vw - 1920px) / (768 - 1920)));
+    }
+
+    @media screen and (min-width: 1920px) {
+      position: absolute;
+      top: 40;
+      right: 240;
     }
   }
 
