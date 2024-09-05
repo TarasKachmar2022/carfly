@@ -26,7 +26,8 @@
 
   @media screen and (min-width: 768px) {
     border-radius: 5px;
-    padding: 25px 40px;
+    padding: calc(25px + (20 - 25) * ((100vw - 1920px) / (768 - 1920)))
+      calc(40px + (30 - 40) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -39,8 +40,12 @@
   color: #fff;
 
   @media screen and (min-width: 768px) {
-    font-size: 18px;
+    font-size: calc(18px + (14 - 18) * ((100vw - 1920px) / (768 - 1920)));
     min-width: calc(1100px + (576 - 1100) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
   }
 }
 
@@ -71,7 +76,14 @@
     calc(20px + (28 - 20) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
+    font-size: calc(16px + (14 - 16) * ((100vw - 1920px) / (768 - 1920)));
+    padding: calc(24px + (20 - 24) * ((100vw - 1920px) / (768 - 1920)))
+      calc(102px + (80 - 102) * ((100vw - 1920px) / (768 - 1920)))
+      calc(33px + (27 - 33) * ((100vw - 1920px) / (768 - 1920)))
+      calc(40px + (30 - 40) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 16px;
-    padding: 24px 102px 33px 40px;
   }
 }
