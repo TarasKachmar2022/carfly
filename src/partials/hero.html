@@ -9,38 +9,6 @@
   </div>
   <div class="hero__wrap">
     <picture>
-      <!-- desktop screen -->
-      <source
-        media="(min-width: 768px)"
-        srcset="
-          ./images/hero/hero-img-m-290.webp   290w,
-          ./images/hero/hero-img-m-435.webp   435w,
-          ./images/hero/hero-img-m-580.webp   580w,
-          ./images/hero/hero-img-m-693.webp   693w,
-          ./images/hero/hero-img-m-870.webp   870w,
-          ./images/hero/hero-img-m-1305.webp 1305w,
-          ./images/hero/hero-img-m-1386.webp 1386w,
-          ./images/hero/hero-img-m-2079.webp 2079w
-        "
-        sizes="(min-width: 1920px) 589px, (min-width: 768px) 290px, 100vw"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 768px)"
-        srcset="
-          ./images/hero/hero-img-m-290.png   290w,
-          ./images/hero/hero-img-m-435.png   435w,
-          ./images/hero/hero-img-m-580.png   580w,
-          ./images/hero/hero-img-m-693.png   693w,
-          ./images/hero/hero-img-m-870.png   870w,
-          ./images/hero/hero-img-m-1305.png 1305w,
-          ./images/hero/hero-img-m-1386.png 1386w,
-          ./images/hero/hero-img-m-2079.png 2079w
-        "
-        sizes="(min-width: 1920px) 589px, (min-width: 768px) 290px, 100vw"
-        type="image/png"
-      />
-
       <!-- mobile screen -->
       <source
         media="(max-width: 767px)"
@@ -54,7 +22,7 @@
           ./images/hero/hero-img-m-1386.webp 1386w,
           ./images/hero/hero-img-m-2079.webp 2079w
         "
-        sizes="(max-width: 320px) 290px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
+        sizes="(max-width: 320px) 280px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
         type="image/webp"
       />
       <source
@@ -69,9 +37,42 @@
           ./images/hero/hero-img-m-1386.png 1386w,
           ./images/hero/hero-img-m-2079.png 2079w
         "
-        sizes="(max-width: 320px) 290px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
+        sizes="(max-width: 320px) 280px, (max-width: 480px) 435px, (max-width: 767px) 693px, 100vw"
         type="image/png"
       />
+
+      <!-- desktop screen -->
+      <source
+        media="(max-width: 1920px)"
+        srcset="
+          ./images/hero/hero-img-m-290.webp   290w,
+          ./images/hero/hero-img-m-435.webp   435w,
+          ./images/hero/hero-img-m-580.webp   580w,
+          ./images/hero/hero-img-m-693.webp   693w,
+          ./images/hero/hero-img-m-870.webp   870w,
+          ./images/hero/hero-img-m-1305.webp 1305w,
+          ./images/hero/hero-img-m-1386.webp 1386w,
+          ./images/hero/hero-img-m-2079.webp 2079w
+        "
+        sizes="(max-width: 1440px) 442px, (max-width: 1920px) 589px, 100vw"
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 1920px)"
+        srcset="
+          ./images/hero/hero-img-m-290.png   290w,
+          ./images/hero/hero-img-m-435.png   435w,
+          ./images/hero/hero-img-m-580.png   580w,
+          ./images/hero/hero-img-m-693.png   693w,
+          ./images/hero/hero-img-m-870.png   870w,
+          ./images/hero/hero-img-m-1305.png 1305w,
+          ./images/hero/hero-img-m-1386.png 1386w,
+          ./images/hero/hero-img-m-2079.png 2079w
+        "
+        sizes="(max-width: 1440px) 442px, (max-width: 1920px) 589px, 100vw"
+        type="image/png"
+      />
+
       <!-- fallback -->
       <img
         class="hero__img"

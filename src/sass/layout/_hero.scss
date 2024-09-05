@@ -11,7 +11,6 @@
   background-color: #010b26;
 
   @media screen and (min-width: 768px) {
-    // @include section(360, 180);
     @include section(
       calc(360px + (144 - 360) * ((100vw - 1920px) / (768 - 1920))),
       calc(180px + (72 - 180) * ((100vw - 1920px) / (768 - 1920)))
@@ -35,13 +34,13 @@
   @media screen and (min-width: 768px) {
     position: relative;
     display: flex;
-    padding-top: 73px;
+    padding-top: calc(73px + (40 - 73) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
 .hero__wrap {
   @media screen and (min-width: 768px) {
-    margin-top: -73px;
+    margin-top: calc(-73px + (-40 - (-73)) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -50,9 +49,9 @@
   margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
-    font-size: 72px;
-    max-width: 588px;
-    margin-bottom: 30px;
+    font-size: calc(72px + (42 - 72) * ((100vw - 1920px) / (768 - 1920)));
+    max-width: calc(588px + (330 - 588) * ((100vw - 1920px) / (768 - 1920)));
+    margin-bottom: calc(30px + (20 - 30) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -68,14 +67,14 @@
 
   @media screen and (min-width: 768px) {
     font-family: var(--third-font);
-    font-size: 20px;
-    max-width: 487px;
+    font-size: calc(20px + (14 - 20) * ((100vw - 1920px) / (768 - 1920)));
+    max-width: calc(487px + (300 - 487) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
 .hero__img {
   @media screen and (min-width: 768px) {
-    margin-bottom: 30px;
+    margin-bottom: calc(30px + (20 - 30) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -98,8 +97,8 @@
   margin-bottom: calc(11px + (17 - 11) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: calc(15px + (12 - 15) * ((100vw - 1920px) / (768 - 1920)));
+    margin-bottom: calc(15px + (10 - 15) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -109,8 +108,8 @@
   fill: currentColor;
 
   @media screen and (min-width: 768px) {
-    width: 30px;
-    height: 30px;
+    width: calc(30px + (20 - 30) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(30px + (20 - 30) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
@@ -120,22 +119,30 @@
   font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
-    font-size: 16px;
+    font-size: calc(16px + (14 - 16) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
 
 .hero__btn {
   @extend .btn;
-  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
-  min-width: 100%;
+
+  @media screen and (max-width: 767px) {
+    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (768 - 320)));
+    min-width: 100%;
+  }
 
   @media screen and (min-width: 768px) {
     position: absolute;
+    bottom: calc(-100px + (-10 - (-100)) * ((100vw - 1920px) / (768 - 1920)));
+    left: calc(240px + (30 - 240) * ((100vw - 1920px) / (768 - 1920)));
+    font-size: calc(20px + (18 - 20) * ((100vw - 1920px) / (768 - 1920)));
+    min-width: calc(237px + (190 - 237) * ((100vw - 1920px) / (768 - 1920)));
+    height: calc(65px + (55 - 65) * ((100vw - 1920px) / (768 - 1920)));
+  }
+
+  @media screen and (min-width: 1920px) {
     bottom: 62;
     left: 240;
-    font-size: 20px;
-    min-width: 237px;
-    height: 65px;
   }
 }
 

@@ -14,7 +14,7 @@
   font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (768 - 320)));
 
   @media screen and (min-width: 768px) {
-    font-size: calc(22px + (16 - 22) * ((100vw - 1920px) / (768 - 1920)));
+    font-size: calc(22px + (14 - 22) * ((100vw - 1920px) / (768 - 1920)));
   }
 
   @media screen and (min-width: 1920px) {
