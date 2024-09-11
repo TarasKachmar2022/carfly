@@ -74,6 +74,7 @@
 
 .hero__img {
   @media screen and (min-width: 768px) {
+    max-width: calc(589px + (290 - 589) * ((100vw - 1920px) / (768 - 1920)));
     margin-bottom: calc(30px + (20 - 30) * ((100vw - 1920px) / (768 - 1920)));
   }
 }
@@ -133,7 +134,7 @@
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    bottom: calc(-100px + (-10 - (-100)) * ((100vw - 1920px) / (768 - 1920)));
+    bottom: calc(62px + (-130 - (-62)) * ((100vw - 1920px) / (768 - 1920)));
     left: calc(240px + (30 - 240) * ((100vw - 1920px) / (768 - 1920)));
     font-size: calc(20px + (18 - 20) * ((100vw - 1920px) / (768 - 1920)));
     min-width: calc(237px + (190 - 237) * ((100vw - 1920px) / (768 - 1920)));
