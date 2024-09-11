@@ -127,6 +127,17 @@
   }
 }
 
+.contacts__sublink {
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: #fccf31;
+  }
+}
+
 .contacts__map {
   width: calc(290px + (695 - 290) * ((100vw - 320px) / (768 - 320)));
   height: calc(440px + (1055 - 440) * ((100vw - 320px) / (768 - 320)));
