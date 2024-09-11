@@ -9,8 +9,8 @@
 
   @media screen and (min-width: 768px) {
     @include section(
-      calc(300px + (110 - 300) * ((100vw - 1920px) / (768 - 1920))),
-      calc(90px + (40 - 90) * ((100vw - 1920px) / (768 - 1920)))
+      calc(250px + (110 - 250) * ((100vw - 1920px) / (768 - 1920))),
+      calc(100px + (40 - 100) * ((100vw - 1920px) / (768 - 1920)))
     );
     width: 100%;
     height: 100vh;
