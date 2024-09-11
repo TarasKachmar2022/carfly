@@ -33,6 +33,11 @@
     padding: calc(25px + (10 - 25) * ((100vw - 1920px) / (768 - 1920)))
       calc(40px + (20 - 40) * ((100vw - 1920px) / (768 - 1920)));
   }
+
+  &:hover,
+  &:focus {
+    background-color: #07163b;
+  }
 }
 
 .accordion__header {
