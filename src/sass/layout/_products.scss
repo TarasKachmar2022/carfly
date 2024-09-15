@@ -3,6 +3,7 @@
   @include circle();
   @include rectangle-rtl();
   position: relative;
+  font-family: var(--third-font);
   background-color: #010b26;
   z-index: 0;
   overflow: hidden;

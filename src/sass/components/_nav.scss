@@ -19,6 +19,8 @@
 }
 
 .nav__item {
+  font-family: var(--secondary-font);
+
   @media screen and (max-width: 767px) {
     margin-bottom: calc(40px + (60 - 40) * ((100vw - 320px) / (768 - 320)));
   }
@@ -30,7 +32,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    font-family: var(--third-font);
     font-size: calc(20px + (16 - 20) * ((100vw - 1920px) / (768 - 1920)));
     padding-top: calc(70px + (30 - 70) * ((100vw - 1920px) / (768 - 1920)));
     padding-bottom: calc(70px + (30 - 70) * ((100vw - 1920px) / (768 - 1920)));
@@ -41,4 +42,8 @@
     padding-top: 70px;
     padding-bottom: 70px;
   }
+}
+
+.active {
+  font-family: var(--third-font);
 }

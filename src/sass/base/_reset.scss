@@ -1,7 +1,7 @@
 // Частковий ресет
 html {
   @media screen and (max-width: 767px) {
-    overflow: auto;
+    overflow: scroll;
   }
 }
 

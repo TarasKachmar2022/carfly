@@ -1,4 +1,5 @@
 import './js/header-scroll';
+import './js/nav-anim';
 import './js/mobile-menu';
 import './js/swiper';
 import './js/accordion';

@@ -1,20 +1,18 @@
 const mobileMenu = document.querySelector('[data-menu]');
 const openMenuBtn = document.querySelector('[data-menu-btn]');
 const closeMenuBtn = document.querySelector('[data-menu-close-btn]');
-const body = document.querySelector('[data-page]');
+const html = document.querySelector('[data-html]');
 const anchors = document.querySelectorAll('a.nav__link');
 const viewportWidth = window.innerWidth;
 
-if (viewportWidth >= 768) {
-  return;
-} else {
+if (viewportWidth < 768) {
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
 
-    body.classList.toggle('no-scroll');
+    html.classList.toggle('no-scroll');
   };
 
   anchors.forEach(item => {
@@ -28,9 +26,7 @@ if (viewportWidth >= 768) {
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
-    openMenuBtn.classList.remove('active');
-    body.classList.remove('no-scroll');
+    html.classList.remove('no-scroll');
     openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
   });
 }
